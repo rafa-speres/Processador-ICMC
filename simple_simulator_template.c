@@ -1,4 +1,4 @@
-// gcc simple_simulator_Template.c -O3 -march=native -o simulador -Wall -lm
+// gcc simple_simulator_template.c -O3 -march=native -o simulador -Wall -lm
 // -lm is option to execute math.h library file.
 /*
 Perguntas:
@@ -37,7 +37,7 @@ Do todos os comandos...
 //#define sSP 3
 #define sTECLADO 4
 
-// Selecao do Mux3 --> E´ so´ colocar: 0, 1, 2 ... 7  para selecionar os Registradores
+// Selecao do Mux3 --> E´ so´ colocar: 0, 1, 2 ... 7  para selecionar os Registradores // Seleciona com 8 o FR
 
 // Selecao do Mux4 --> E´ so´ colocar: 0, 1, 2 ... 7  para selecionar os Registradores ou 8 para entrar o nr. 1
 
@@ -534,7 +534,7 @@ loop:
                     if( pega_pedaco(IR, 6, 6) == 0){
                         selM3 = rx;
                     } else{
-                        selM3 = sFR;
+                        selM3 = 8;
                     }
                     selM5 = sM3;
                     DecSP = 1;
@@ -626,7 +626,7 @@ loop:
                         LoadReg[rx] = 1;
                     } else {
                         selM6 = sDATA_OUT;
-                        LoadFR = 1
+                        LoadFR = 1;
                     }
 					// -----------------------------
 					state=STATE_FETCH;
