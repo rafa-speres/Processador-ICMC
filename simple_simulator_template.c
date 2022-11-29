@@ -397,7 +397,7 @@ loop:
 					break;
 
 				case MOV:
-                if(pega_pedaco(IR, 0, 0)){
+                if(pega_pedaco(IR, 0, 0) == 0){
                     selM4 = ry;
                     selM2 = sM4;
                     LoadReg[rx] = 1;
