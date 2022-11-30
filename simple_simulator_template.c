@@ -436,17 +436,17 @@ loop:
 
 				case INC:
 					//reg[rx]++;                                  // Inc Rx ou DEC
-					selM3 = rx;
-                    selM4 = 01;
-                    selM2 = sULA;
-                    LoadReg[rx] = 1;
-                    if(pega_pedaco(IR, 6, 6) == 0){
-                        OP = ADD;
-                    }else{
-                        OP = SUB;
-                    }
-                    selM6 = sULA;
-                    LoadFR = 1;
+				    selM3 = rx;
+				    selM4 = 8;
+				    selM2 = sULA;
+				    LoadReg[rx] = 1;
+				    if(pega_pedaco(IR, 6, 6) == 0){
+					OP = ADD;
+				    }else{
+					OP = SUB;
+				    }
+				    selM6 = sULA;
+				    LoadFR = 1;
 					// -----------------------------
 					state=STATE_FETCH;
 					break;
