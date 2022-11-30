@@ -446,6 +446,7 @@ loop:
 					OP = SUB;
 				    }
 				    selM6 = sULA;
+				    carry = 0;
 				    LoadFR = 1;
 					// -----------------------------
 					state=STATE_FETCH;
