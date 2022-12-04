@@ -612,7 +612,8 @@ loop:
 					break; 
 
 				case CALL:
-                    selM1 =sSP;
+                    //selM1 =sSP; LINHA QUE ACHAMOS ESTAR ERRADA
+		    selM1 = sPC;		
                     RW = 0;
                     LoadPC = 1;
 					// -----------------------------
