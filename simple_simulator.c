@@ -57,7 +57,9 @@ Do todos os comandos...
 #define LOADINDEX 60  // "111100"; -- LOAD Rx Ry   -- Rx <- M[Ry]	Format: < inst(6) | Rx(3) | Ry(3) | xxxx >
 #define STOREINDEX 61 // "111101"; -- STORE Rx Ry  -- M[Rx] <- Ry	Format: < inst(6) | Rx(3) | Ry(3) | xxxx >
 #define MOV	51        // "110011"; -- MOV Rx Ry    -- Rx <- Ry	  	Format: < inst(6) | Rx(3) | Ry(3) | xxxx >
-
+#define LOADALL 57    // "111001";
+#define LOADALLN 58   // "111010";
+#define LOADALLI 59   // "111011";
 
 // I/O Instructions:
 #define OUTCHAR	50  // "110010"; -- OUTCHAR Rx Ry -- Video[Ry] <- Char(Rx)								Format: < inst(6) | Rx(3) | Ry(3) | xxxx >
@@ -627,6 +629,49 @@ loop:
 					state=STATE_FETCH;
 					break;
 
+				case LOADALL:
+					selM1 = sPC;
+					RW = 0;
+					LoadMAR = 1; 
+					IncPC = 1;
+					// -----------------------------
+					state=STATE_EXECUTE;
+					break;
+
+				case LOADALLN:
+					selM1 = sPC;
+					RW = 0;
+					selM2 = sDATA_OUT;
+					LoadReg[reg[0]] = 1;
+					LoadReg[reg[1]] = 1;
+					LoadReg[reg[2]] = 1;
+					LoadReg[reg[3]] = 1;
+					LoadReg[reg[4]] = 1;
+					LoadReg[reg[5]] = 1;
+					LoadReg[reg[6]] = 1;
+					LoadReg[reg[7]] = 1;
+					IncPC = 1;
+					// -----------------------------
+					state=STATE_FETCH;
+					break;
+
+				case LOADALLI:
+					selM4 = ry;
+					selM1 = sM4;
+					RW = 0;
+					selM2 = sDATA_OUT;
+					LoadReg[reg[0]] = 1;
+					LoadReg[reg[1]] = 1;
+					LoadReg[reg[2]] = 1;
+					LoadReg[reg[3]] = 1;
+					LoadReg[reg[4]] = 1;
+					LoadReg[reg[5]] = 1;
+					LoadReg[reg[6]] = 1;
+					LoadReg[reg[7]] = 1;
+					// -----------------------------
+					state=STATE_FETCH;
+					break;
+
 				default:
 
 					state=STATE_FETCH;
@@ -690,6 +735,22 @@ loop:
 					LoadPC = 1;
 					// -----------------------------
 					state=STATE_EXECUTE2;
+					break;
+
+				case LOADALL:
+					selM1 = sMAR;
+					RW = 0;
+					selM2 = sDATA_OUT;
+					LoadReg[reg[0]] = 1;
+					LoadReg[reg[1]] = 1;
+					LoadReg[reg[2]] = 1;
+					LoadReg[reg[3]] = 1;
+					LoadReg[reg[4]] = 1;
+					LoadReg[reg[5]] = 1;
+					LoadReg[reg[6]] = 1;
+					LoadReg[reg[7]] = 1;
+					// -----------------------------
+					state=STATE_FETCH;
 					break;
 			}
 
