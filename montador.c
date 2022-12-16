@@ -354,6 +354,60 @@ void MontarInstrucoes(void)
         {
             switch (op_code)
             {
+
+                case LOADALL_CODE :
+                    str_tmp1 = parser_GetItem_s();
+                    val1 = BuscaRegistrador(str_tmp1);
+                    free(str_tmp1);
+                    parser_Match(',');
+                    val2 = RecebeEndereco();
+                    str_tmp1 = ConverteRegistrador(val1);
+                    str_tmp2 = NumPBinString(val2);
+                    sprintf(str_msg,"%s%s0000000",LOADALL,str_tmp1);
+                    parser_Write_Inst(str_msg,end_cnt);
+                    end_cnt += 1;
+                    sprintf(str_msg,"%s",str_tmp2);
+                    parser_Write_Inst(str_msg,end_cnt);
+                    end_cnt +=1;
+                    free(str_tmp1);
+                    free(str_tmp2);
+                    break;
+
+                case LOADALLN_CODE :
+                    str_tmp1 = parser_GetItem_s();
+                    val1 = BuscaRegistrador(str_tmp1);
+                    free(str_tmp1);
+                    parser_Match(',');
+                    val2 = RecebeNumero();
+                    str_tmp1 = ConverteRegistrador(val1);
+                    str_tmp2 = NumPBinString(val2);
+                    sprintf(str_msg,"%s%s0000000",LOADALLN,str_tmp1);
+                    parser_Write_Inst(str_msg,end_cnt);
+                    end_cnt += 1;
+                    sprintf(str_msg,"%s",str_tmp2);
+                    parser_Write_Inst(str_msg,end_cnt);
+                    end_cnt +=1;
+                    free(str_tmp1);
+                    free(str_tmp2);
+                    break;   
+
+                case LOADALLI_CODE :
+                    str_tmp1 = parser_GetItem_s();
+                    val1 = BuscaRegistrador(str_tmp1);
+                    free(str_tmp1);
+                    parser_Match(',');
+                    str_tmp2 = parser_GetItem_s();
+                    val2 = BuscaRegistrador(str_tmp2);
+                    free(str_tmp2);
+                    str_tmp1 = ConverteRegistrador(val1);
+                    str_tmp2 = ConverteRegistrador(val2);
+                    sprintf(str_msg,"%s%s%s0000",LOADALLI,str_tmp1,str_tmp2);
+                    free(str_tmp1);
+                    free(str_tmp2);
+                    parser_Write_Inst(str_msg,end_cnt);
+                    end_cnt += 1;
+                    break;
+
                 /* ==============
                    Load Rx, End
                    ==============
@@ -447,7 +501,7 @@ void MontarInstrucoes(void)
                     break;
                 
                 /* ==============
-	Loadi Rx, Ry
+	                Loadi Rx, Ry
                    ==============
                 */
                 
