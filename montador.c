@@ -161,14 +161,17 @@ void DetectarLabels(void)
 
             /* Loads e Stores */
             case LOAD_CODE :
+            case LOADALL_CODE :
             case STORE_CODE :
             case LOADIMED_CODE :
+            case LOADALLN_CODE :
             case STOREIMED_CODE :
                 parser_SkipUntil(','); 
                 parser_SkipUntilEnd(); 
                 end_cnt+=2; 
                 break;
             case LOADINDEX_CODE :
+            case LOADALLI_CODE :
             case STOREINDEX_CODE :
             case INPUT_CODE :
             case OUTPUT_CODE :
@@ -2598,6 +2601,18 @@ int BuscaInstrucao(char * nome)
     else if (strcmp(str_tmp,ALLOC_STR) == 0)
     {
         return ALLOC_CODE;
+    }
+    else if(strcmp(str_tmp,LOADALL_STR) == 0)
+    {
+        return LOADALL_CODE;
+    }
+    else if(strcmp(str_tmp,LOADALLI_STR) == 0)
+    {
+        return LOADALLI_CODE;
+    }
+    else if(strcmp(str_tmp,LOADALLN_STR) == 0)
+    {
+        return LOADALLN_CODE;
     }
 
     return LABEL_CODE;
