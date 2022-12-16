@@ -350,10 +350,13 @@
 /* #define REGZ_STR "RZ" */
 
 /*
+
   Modelo de memoria
+
   Obs.: Este modelo nao precisa ser seguido, mas a
   pseudo-instrucao 'alloc' nao devera ser usada
   neste caso.
+
   [00000 - 16384] : Programa e variaveis (16kw 32kb)
   [16385 - 24576] : Dados estaticos (8kw 16kb)
   [24577 - 30681] : Dados dinamicos (6kw 12kb)
@@ -367,6 +370,7 @@
   [32749 - 32758] : Argumentos
   [32759]	  : Retorno
   [32760 - 32767] : Interrupcoes
+
 */
 
 /* Definicoes da memoria */

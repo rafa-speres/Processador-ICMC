@@ -131,9 +131,11 @@ void DetectarLabels(void)
         {
             /*
             alloc Label, #Nr
+
             Observacoes : alloc aloca, em tempo de montagem, um espaco
                (com base no numero) na parte da memoria para dados estaticos e
                cria um label para este espaco.
+
                Observacoes : alloc deve receber apenas numeros positivos (unsigned)
             */
             str_tmp1 = parser_GetItem_s();
@@ -152,6 +154,7 @@ void DetectarLabels(void)
             /* Se for intrucao entao soma end_cnt
             conforme numero de linhas de endereco
             que esta funcao necessita.
+
             Tambem pula a declaracao da instrucao. */
             switch (op_code)
             {
@@ -509,6 +512,7 @@ void MontarInstrucoes(void)
                     break;
                     
                 /* ==============
+
 	Storei Rx, Ry
                    ==============
                 */
@@ -2126,6 +2130,7 @@ void MontarInstrucoes(void)
                    Static End, #Nr
                    ou
                    Static End + #Nr, #Nr
+
                    Observacoes : Endereco indicado recebera o valor indicado pelo numero.
                    Atencao : A montagem do programa pode acabar sobre-escrevendo este
                              endereco com outro valor. Utilize preferencialmente para regioes
