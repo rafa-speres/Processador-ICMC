@@ -7,6 +7,7 @@
 ;	3) Qual e' a Sequencia de Operacoes: Descrever todos os comandos que tem que dar nos cilos de Dec e Exec
 ;	4) Ja' terminou??? Cumpriu o que tinha que fazer??? O PC esta' pronto para a proxima instrucao (cuidado com Load, Loadn, Store, Jmp, Call)
 
+
 	; Teste do Loadn
 	loadn r0, #0		
 	loadn r1, #'A'		
@@ -146,6 +147,24 @@ CallSai:
 	push r1
 	pop r2
 	outchar r2, r0		; Printa P na linha 30
+
+	; Teste do Loadall
+	loadall r0, Dado
+	loadn r0, #32
+	outchar r1, r0
+
+	; Teste do Loadalln
+	loadalln r0, #82
+	loadn r0, #34
+	outchar r1, r0
+
+	; Teste dol Loadalli
+	loadn r1, #81
+	Loadalli r2, r1
+	loadn r0, #36
+	outchar r2, r0
+
+	; Teste do Loadalli
 	
 	
 	
