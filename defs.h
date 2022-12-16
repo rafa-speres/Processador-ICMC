@@ -102,6 +102,12 @@
 #define INPUT_CODE              96
 #define OUTPUT_CODE             97
 
+//INSTRUÇÕES QUE DESENVOLVEMOS
+#define LOADALL_CODE            98 
+#define LOADALLN_CODE           99 
+#define LOADALLI_CODE          100 
+
+
 /* Definicoes dos op codes (binarios em strings) */
 
 /* Data Manipulation Instructions: */
@@ -112,6 +118,10 @@
 #define LOADINDEX       "111100"
 #define STOREINDEX      "111101"
 #define MOV             "110011"
+//INSTRUÇÕES QUE DESENVOLVEMOS
+#define LOADALL         "111001" 
+#define LOADALLN        "111010"
+#define LOADALLI        "111011"
 
 /* Peripheric Instructions: */
 #define INPUT	        "111110"
@@ -181,6 +191,11 @@
 #define LOAD_STR                "LOAD"
 #define LOADIMED_STR            "LOADN"
 #define LOADINDEX_STR           "LOADI"
+
+/* LOADALL - INSTRUÇÕES QUE DESENVOLVEMOS*/
+#define LOADALL                 "LOADALL"
+#define LOADALLN                "LOADALLN"
+#define LOADALLI                "LOADALLI"
 
 /* STORE */
 #define STORE_STR               "STORE"
