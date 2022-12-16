@@ -165,7 +165,7 @@
 #define NOP             "000000"
 #define HALT            "001111"
 #define CLEARC          "001000"
-#define BREAKP		"001110"
+#define BREAKP	      	"001110"
 
 /* Definicoes das condicoes (binarios em strings) */
 #define NO_COND         "0000"
@@ -193,9 +193,9 @@
 #define LOADINDEX_STR           "LOADI"
 
 /* LOADALL - INSTRUÇÕES QUE DESENVOLVEMOS*/
-#define LOADALL                 "LOADALL"
-#define LOADALLN                "LOADALLN"
-#define LOADALLI                "LOADALLI"
+#define LOADALL_STR             "LOADALL"
+#define LOADALLN_STR            "LOADALLN"
+#define LOADALLI_STR            "LOADALLI"
 
 /* STORE */
 #define STORE_STR               "STORE"
