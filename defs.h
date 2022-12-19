@@ -31,7 +31,7 @@
 #define ROTL_CODE               22
 #define ROTR_CODE               23
 #define CMP_CODE                24
-#define BRA_CODE                25
+//#define BRA_CODE                25
 #define BEQ_CODE                26
 #define BNE_CODE                27
 #define BZ_CODE                 28
@@ -103,9 +103,9 @@
 #define OUTPUT_CODE             97
 
 //INSTRUÇÕES QUE DESENVOLVEMOS
-#define LOADALL_CODE            98 
+#define LOADALL_CODE            98
 #define LOADALLN_CODE           99 
-#define LOADALLI_CODE          100 
+#define LOADALLI_CODE           25
 
 
 /* Definicoes dos op codes (binarios em strings) */
