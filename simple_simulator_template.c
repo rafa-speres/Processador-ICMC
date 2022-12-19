@@ -239,7 +239,15 @@ loop:
 	rz = pega_pedaco(IR,3,1);
 	
 	// Coloca valor do Mux2 para o registrador com Load
-	if(LoadReg[rx]) reg[rx] = M2;
+	//if(LoadReg[rx]) reg[rx] = M2;
+    if(LoadReg[0]) reg[0] = M2;
+    if(LoadReg[1]) reg[1] = M2;
+    if(LoadReg[2]) reg[2] = M2;
+    if(LoadReg[3]) reg[3] = M2;
+    if(LoadReg[4]) reg[4] = M2;
+    if(LoadReg[5]) reg[5] = M2;
+    if(LoadReg[6]) reg[6] = M2;
+    if(LoadReg[7]) reg[7] = M2;
 
 	// Operacao de Escrita da Memoria
 	if (RW == 1) MEMORY[M1] = M5;
@@ -629,14 +637,14 @@ loop:
 					selM1 = sPC;
 					RW = 0;
 					selM2 = sDATA_OUT;
-					LoadReg[reg[0]] = 1;
-					LoadReg[reg[1]] = 1;
-					LoadReg[reg[2]] = 1;
-					LoadReg[reg[3]] = 1;
-					LoadReg[reg[4]] = 1;
-					LoadReg[reg[5]] = 1;
-					LoadReg[reg[6]] = 1;
-					LoadReg[reg[7]] = 1;
+					LoadReg[0] = 1;
+					LoadReg[1] = 1;
+					LoadReg[2] = 1;
+					LoadReg[3] = 1;
+					LoadReg[4] = 1;
+					LoadReg[5] = 1;
+					LoadReg[6] = 1;
+					LoadReg[7] = 1;
 					IncPC = 1;
 					// -----------------------------
 					state=STATE_FETCH;
@@ -647,14 +655,14 @@ loop:
 					selM1 = sM4;
 					RW = 0;
 					selM2 = sDATA_OUT;
-					LoadReg[reg[0]] = 1;
-					LoadReg[reg[1]] = 1;
-					LoadReg[reg[2]] = 1;
-					LoadReg[reg[3]] = 1;
-					LoadReg[reg[4]] = 1;
-					LoadReg[reg[5]] = 1;
-					LoadReg[reg[6]] = 1;
-					LoadReg[reg[7]] = 1;
+					LoadReg[0] = 1;
+					LoadReg[1] = 1;
+					LoadReg[2] = 1;
+					LoadReg[3] = 1;
+					LoadReg[4] = 1;
+					LoadReg[5] = 1;
+					LoadReg[6] = 1;
+					LoadReg[7] = 1;
 					// -----------------------------
 					state=STATE_FETCH;
 					break;
@@ -729,14 +737,14 @@ loop:
 					selM1 = sMAR;
 					RW = 0;
 					selM2 = sDATA_OUT;
-					LoadReg[reg[0]] = 1;
-					LoadReg[reg[1]] = 1;
-					LoadReg[reg[2]] = 1;
-					LoadReg[reg[3]] = 1;
-					LoadReg[reg[4]] = 1;
-					LoadReg[reg[5]] = 1;
-					LoadReg[reg[6]] = 1;
-					LoadReg[reg[7]] = 1;
+					LoadReg[0] = 1;
+					LoadReg[1] = 1;
+					LoadReg[2] = 1;
+					LoadReg[3] = 1;
+					LoadReg[4] = 1;
+					LoadReg[5] = 1;
+					LoadReg[6] = 1;
+					LoadReg[7] = 1;
 					// -----------------------------
 					state=STATE_FETCH;
 					break;
