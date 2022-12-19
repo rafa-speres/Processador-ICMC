@@ -1,5 +1,5 @@
 # Processador-ICMC
-Processador do ICMC com as instruções originais e melhorias implementadas por Rafael Scalon Peres Conti, Henrique Gualberto Marques, João Otávio Cano, Giancarlo Malfate Caprino e Gabriel Moraes Andreghetti
+Processador do ICMC com as instruções originais e melhorias implementadas por Rafael Scalon Peres Conti (Grupo 13 - Snake do Hexa - BSI), Henrique Gualberto Marques (Grupo 13 - Snake do Hexa - BSI), João Otávio Cano (Grupo 13 - Snake do Hexa - BSI), Giancarlo Malfate Caprino (Grupo 1 - Jogo da Nave - BSI)  e Gabriel Moraes Andreghetti (Grupo 6 - Em Busca do Hexa - BSI).
 
 Baseado no material e nas aulas do professor Eduardo do Valle Simões e nos códigos disponíveis no repositório https://github.com/simoesusp/Processador-ICMC (pasta Simple_Simulator).
 
