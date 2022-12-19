@@ -181,7 +181,7 @@ void DetectarLabels(void)
                 break;
 
             /* BRA : instr +- () -> [...] */
-            case BRA_CODE :
+            //case BRA_CODE :
             case BEQ_CODE :
             case BNE_CODE :
             case BZ_CODE :
@@ -1164,7 +1164,7 @@ void MontarInstrucoes(void)
                    ==============
                 */
                 
-                case BRA_CODE :
+                //case BRA_CODE :
                     
                 /* ==============
                    Beq +/- T
@@ -2366,10 +2366,10 @@ int BuscaInstrucao(char * nome)
     {
         return CMP_CODE;
     }
-    else if (strcmp(str_tmp,BRA_STR) == 0)
-    {
-        return BRA_CODE;
-    }
+    //else if (strcmp(str_tmp,BRA_STR) == 0)
+    //{
+       // return BRA_CODE;
+   // }
     else if (strcmp(str_tmp,BEQ_STR) == 0)
     {
         return BEQ_CODE;
